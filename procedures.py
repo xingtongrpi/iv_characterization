@@ -38,10 +38,10 @@ class IVSweepProcedure(Procedure):
         :return:
         """
         log.info("Connecting and configuring the instrument ...")
-        adapter = VISAAdapter("GPIB0::22::INSTR", visa_library='@py', query_delay=0.1)
+        adapter = VISAAdapter("GPIB0::22::INSTR", query_delay=0.1)
         self.picoammeter = Keithley6487(adapter)
         self.picoammeter.reset()
-        self.picoammeter.configure_sweep(self.start, self.stop, self.step, self.delay, self.polarity)
+        self.picoammeter.configure_sweep(self.start, self.stop, self.step, self.delay, 1, self.polarity)
         log.info("Configuration complete.")
 
     def execute(self):

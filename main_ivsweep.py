@@ -33,10 +33,10 @@ class MainWindow(ManagedWindow):
         if procedure is None:
             procedure = self.make_procedure()
 
-        prefix = 'DUT{:s}_{:s}_{:s}_{:s}'.format(
-            procedure.dev_num.value,
-            procedure.pd_type.value,
-            procedure.pd_size.value
+        prefix = 'DUT{:s}_{:s}_{:s}'.format(
+            str(procedure.dev_num),
+            procedure.pd_type,
+            procedure.pd_size
         )
         # suffix = strftime("%Y%m%d_%H%M%S")
         filename = unique_filename(
