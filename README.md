@@ -1,6 +1,7 @@
 # Photodetector IV Sweep Automation
 
 A set of Python GUI's for running IV sweep characterization on photodiodes using a Keithley 6487 Picoammeter.
+Note: This fork is for Windows OS. For Linux user, please use [johnrollinson's repository](https://github.com/johnrollinson/iv_characterization)
 
 ## Requirements
 
